@@ -6,10 +6,19 @@ from tslearn.preprocessing import TimeSeriesScalerMeanVariance, \
 import numpy
 import matplotlib.pyplot as plt
 
+################################################################################
+# Generates a cluster graph from all the .txt vectors in the current directory #
+################################################################################
+
+# Size to resample all vectors to
 n = 100
+# Troop names used for title
 troops = ["drones", "zerglings", "roaches", "hydralisks", "mutalisks", "banelings"]
+# Clustering metric
 dmetric = "softdtw"
+# K
 clustercount = 3
+# Vertical limit of the drawn graph
 ylimit = 50
 
 path = os.getcwd()
